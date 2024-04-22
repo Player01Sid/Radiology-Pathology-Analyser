@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Brain MRI Prediction</title>
+</head>
+<body>
+    <h1>Brain MRI Prediction</h1>
+    
+    
+    <form id="uploadForm" enctype="multipart/form-data">
+        <input type="file" id="imageInput" name="image">
+        <button type="submit">Submit</button>
+    </form>
+    
+    <br><br>
+    <div id="result"></div>
+
+    
+    <script>
+        document.getElementById("uploadForm").addEventListener("submit", function(event) {
+            event.preventDefault();
+            
+            let formElement = document.getElementById("uploadForm");
+            let formData = new FormData(formElement);
+
+            fetch('/process_image', {
+                method: 'POST',
+                body: formData
+            })
+            .then(response => response.json())
+            .then(data => {
+                // Update the 'result' div with the returned data
+                document.getElementById("result").innerHTML = "Prediction: " + data.prediction;
+            })
+            .catch(error => {
+                console.error('Error:', error);
+            });
+        });
+    </script>
+</body>
+</html>
