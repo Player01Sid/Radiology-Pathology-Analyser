@@ -1,6 +1,6 @@
 # Radiology-Pathology-Analyser
 
-Description: Implemented trained AI model, and integrated it to web page using **Python**. Where, user can upload MRI scan of brain inorder to predict using AI model that whether it is affected by Brain Tumour or not.
+Description: Implemented trained AI model, and integrated it to web page using **Python**. Where, user can upload MRI scan of brain inorder to predict using AI model that whether it is affected by Brain Tumor or not.
 
 ----
 
