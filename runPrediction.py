@@ -16,6 +16,7 @@ def makePrediction(model,img):
     prediction= model.predict(input_img)
 
     if prediction[0][0] <= 0.5:
-        return "With Tumor"
+      return f"Tumor present."
     else:
-        return "No Tumor"
+      return f"Tumor not present."
+

@@ -56,7 +56,7 @@ model = models.Sequential([
 model.compile(optimizer='adam', loss='categorical_crossentropy', metrics=['accuracy'])
 
 # Train the model
-history = model.fit(train_images, train_labels, epochs=20, batch_size=32,
+history = model.fit(train_images, train_labels, epochs=5, batch_size=32,
                     validation_data=(val_images, val_labels))
 
 # Evaluate on test set (optional)
