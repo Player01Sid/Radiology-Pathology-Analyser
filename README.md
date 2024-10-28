@@ -7,7 +7,7 @@ Description: Implemented trained AI model, and integrated it to web page using *
 Required Modules
 
 ``` bash
-pip install numpy opencv-python Pillow scikit-learn tensorflow
+pip install numpy opencv-python Pillow scikit-learn tensorflow flask
 ```
 
 ----
